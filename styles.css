@@ -1,0 +1,307 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "peaksware-fonts";
+  src:url("fonts/peaksware-fonts.eot");
+  src:url("fonts/peaksware-fonts.eot?#iefix") format("embedded-opentype"),
+    url("fonts/peaksware-fonts.woff") format("woff"),
+    url("fonts/peaksware-fonts.ttf") format("truetype"),
+    url("fonts/peaksware-fonts.svg#peaksware-fonts") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "peaksware-fonts" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="pw-"]:before,
+[class*=" pw-"]:before {
+  font-family: "peaksware-fonts" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pw-tp-peaks:before {
+  content: "\61";
+}
+.pw-tp-training:before {
+  content: "\62";
+}
+.pw-th-train:before {
+  content: "\63";
+}
+.pw-th-heroic:before {
+  content: "\64";
+}
+.pw-ware:before {
+  content: "\65";
+}
+.pw-peaks:before {
+  content: "\66";
+}
+.pw-bbs-text:before {
+  content: "\67";
+}
+.pw-bbs-flame:before {
+  content: "\68";
+}
+.pw-bbs-shine:before {
+  content: "\69";
+}
+.pw-bbs-wheel:before {
+  content: "\6a";
+}
+.pw-alfred-logo:before {
+  content: "\6b";
+}
+.pw-bbs-logo:before {
+  content: "\6c";
+}
+.pw-mm-logo:before {
+  content: "\6d";
+}
+.pw-peaksware:before {
+  content: "\6e";
+}
+.pw-trainingpeaks-horizontal:before {
+  content: "\6f";
+}
+.pw-trainingpeaks-vertical:before {
+  content: "\70";
+}
+.pw-trainheroic:before {
+  content: "\71";
+}
+
+/* @font-face to load icon font... */
+
+/* horizontal button row: inline-block vs float makes positioning easier using text-align */
+
+/* any class that starts with "st-icon-" */
+[class^="st-icon-"] {
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  /* child elements absolute */
+  position: relative;
+  /* remove inline-block white-space */
+  margin-right: -.16em; /* 5px */
+  /* if not already universally applied */
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* padding here for text, icons replicate this using size and position:absolute - padding makes touch-target bigger */
+  padding: 0.143em;
+  /* units used in font: 1em = 2048, icons 2400 wide, so icons are 1.171875em (2400/2048). Add padding x2 to get size: */
+  height: 1.45788em;
+  width: 1.45788em;
+  font-size: 2em;
+  /* text hidden old-school */
+  text-align: left;
+  text-indent: -9999px; }
+
+/* position:absolute stacks pseudo elements - extra &lt;span> in markup = 2 extra pseudo elements */
+[class^="st-icon-"]:before,
+[class^="st-icon-"]:after,
+[class^="st-icon-"] span:before,
+[class^="st-icon-"] span:after {
+  display: block;
+  position: absolute;
+  white-space: normal;
+  /* undo text hidden */
+  text-indent: 0;
+  /* inherits size from parent, ems cascade */
+  font-size: 2em;
+  font-family: "peaksware-fonts" !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  /* screenreaders */
+  speak: none;
+  /* transitions here */ }
+
+.st-icon-bbs {
+  height: 2em;
+  width: 3em;
+}
+
+.st-icon-bbs:before {
+  /* character code - unicode private use area */
+  content: "\67"; /* "bbs text" */
+  color: #231f20;
+  left:0.42em;
+
+}
+.st-icon-bbs:after {
+  content: "\68";
+  color: #ffca05;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -o-text-fill-color: transparent;
+  background: -webkit-linear-gradient(45deg, #ffca05, #ef4e23 60%, #ec1c24);
+  background: -moz-linear-gradient(45deg, #ffca05, #ef4e23 60%, #ec1c24);
+  background: -o-linear-gradient(45deg, #ffca05, #ef4e23 60%, #ec1c24);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  font-size:0.9em;
+  top:0.1em;
+  left:0.2em;
+
+}
+
+.st-icon-bbs span:before {
+  content: "\69"; /* "bbs text" */
+  color: #ccc;
+  z-index:11;
+  font-size:0.76em;
+  left:-0.28em;
+  top:0.85em;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -o-text-fill-color: transparent;
+  background: -webkit-linear-gradient(-45deg, transparent, #fff);
+  background: -moz-linear-gradient(-45deg, transparent, #fff);
+  background: -o-linear-gradient(-45deg, transparent, #fff);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -o-background-clip: text;
+
+}
+
+.st-icon-bbs span:after {
+  content: "\6a"; /* "bbs text" */
+  color: #231f20;
+  left:-0.36em;
+  top:0.48em;
+  font-size:1.04em;
+  z-index:10;
+}
+
+.st-icon-peaksware {
+  width:4em;
+  height:2em;
+}
+
+.st-icon-peaksware:before {
+  content: "\66"; /* "bbs text" */
+  color: #000;
+  left:0;
+  font-size:2em;
+}
+
+.st-icon-peaksware:after {
+  content:"\65";
+  color:#00aeef;
+  left:1.21em;
+  top:0.18em;
+  font-size:1.7em;
+}
+
+.st-icon-alfred {
+  width:1.9em;
+  height:1.75em;
+}
+
+.st-icon-alfred:before {
+  content:"\6b";
+  font-size:1.3em;
+  color:#000;
+}
+
+.st-icon-trainingpeaks-horizontal {
+  width:4.2em;
+  height:2em;
+}
+
+.st-icon-trainingpeaks-horizontal:before {
+  content:"\62";
+  left:0;
+  font-size:2.4em;
+  top:0;
+  color:#000;
+}
+
+.st-icon-trainingpeaks-horizontal:after {
+  content:"\61";
+  left:1.376em;
+  top:0.186em;
+  font-size:1.75em;
+  color:#005695;
+}
+
+.st-icon-trainingpeaks-vertical {
+  width:3em;
+  height:2.2em;
+}
+
+.st-icon-trainingpeaks-vertical:before {
+  content:"\62";
+  left:0;
+  font-size:2.4em;
+  top:0;
+  color:#000;
+  display:block;
+}
+
+.st-icon-trainingpeaks-vertical:after {
+  content:"\61";
+  left:0;
+  top:0.4em;
+  font-size:1.75em;
+  color:#005695;
+}
+
+.st-icon-makemusic {
+  width:4.8em;
+  height:3em;
+}
+
+.st-icon-makemusic:before {
+  content:"\6d";
+  left:0;
+  font-size:4.5em;
+  top:0;
+  color:#8a8a8d;
+  display:block;
+}
+
+.st-icon-trainheroic {
+  width:4em;
+  height:1.5em;
+}
+
+.st-icon-trainheroic:before {
+  content:"\63";
+  left:0;
+  top:0;
+  color:#fdb913;
+  font-size:1.2em;
+}
+
+.st-icon-trainheroic:after {
+  content:"\64";
+  left:0.55em;
+  top:-0.215em;
+  font-size:2.09em;
+  color:#1c2b39;
+}
